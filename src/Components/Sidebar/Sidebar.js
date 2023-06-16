@@ -19,7 +19,7 @@ const Sidebar = () => {
                     <p>Gerente</p>
                 </div>
             </div>
-            <div>
+            <div className='sidebar-nav-container'>
                 <ul>
                     <li>Menu 1</li>
                     <li>Menu 2</li>
