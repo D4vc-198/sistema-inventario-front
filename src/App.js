@@ -1,12 +1,10 @@
-import './App.css';
-import Tabla from './Components/Tabla/Tabla';
-import Tarjeta from './Components/Tarjetas/Tarjeta';
+import './Styles/App.css';
+import Sidebar from './Components/Sidebar/Sidebar';
 
 function App() {
   return (
     <>
-      <Tabla />
-      <Tarjeta />
+    <Sidebar />
     </>
   )
 }
