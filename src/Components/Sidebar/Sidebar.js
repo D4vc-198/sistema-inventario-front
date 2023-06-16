@@ -2,6 +2,8 @@ import './../../Styles/sidebar.css'
 import holbertonLogo from './../../Assets/Holberton-logo.svg'
 // import holbertonLogo from './../../Assets/Holberton-logo.svg'
 import userProfileImage from './../../Assets/user-profile-image.png'
+import { FaUserFriends, FaBox, FaTruck } from 'react-icons/fa';
+
 
 const Sidebar = () => {
     return (
@@ -15,15 +17,30 @@ const Sidebar = () => {
                 </div>
 
                 <div className='sidebar-user-info-data'>
-                    <p>Diego A. Valdez</p>
+                    <strong>Diego A. Valdez</strong>
                     <p>Gerente</p>
                 </div>
             </div>
             <div className='sidebar-nav-container'>
                 <ul>
-                    <li>Menu 1</li>
-                    <li>Menu 2</li>
-                    <li>Menu 3</li>
+                    <li>
+                        <FaUserFriends size='1.4em'/>
+                        <div className='sidebar-item-text'>
+                            <p>Usuarios</p>
+                        </div>
+                    </li>
+                    <li>
+                        <FaBox size='1.4em'/>
+                        <div className='sidebar-item-text'>
+                            <p>Inventario</p>
+                        </div>
+                    </li>
+                    <li>
+                        <FaTruck size='1.4em'/>
+                        <div className='sidebar-item-text'>
+                            <p>Proveedores</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
