@@ -1,6 +1,6 @@
-import './App.css';
-import Tabla from './Components/Tabla/Tabla';
-import Tarjeta from './Components/Tarjetas/Tarjeta';
+import './Styles/App.css'
+import Sidebar from './Components/Sidebar/Sidebar';
+import Usuarios from './Pages/Usuarios';
 
 function App() {
   const headerCell = [{name: "Employee"}, {name: "Product"}, {name: "SKU"}, {name: "Expiry Day"}, {name: "Quantity"}, {name: "Price"}]
@@ -39,11 +39,16 @@ function App() {
     }, 
   ]
   return (
-    <>
-      <Tabla header={headerCell} data={tableData}/>
-      <Tarjeta />
-    </>
-  )
+    <div className='container'>
+      <div className='sidebar'>
+        <Sidebar />
+      </div>
+      <div className='main-content'>
+        <Usuarios />
+         <Tabla header={headerCell} data={tableData}/>
+      </div>
+    </div>
+  );
 }
 
 export default App;

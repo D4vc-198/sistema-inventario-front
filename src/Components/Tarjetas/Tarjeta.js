@@ -1,10 +1,19 @@
 import React from "react"
+import "./../../Styles/Tarjetas.css"
 
-const Tarjeta = () => {
+const Tarjeta = (props) => {
+    const {icon, cardTitle, cardDescription } = props
+
     return (
-        <>
-            <p>Tarjeta</p>
-        </>
+        <div className="card-container">
+            <div className="card-icon-container">
+                <p>{icon}</p>
+            </div>
+            <div className="card-info-container">
+                <p>{cardTitle}</p>
+                <p>{cardDescription}</p>
+            </div>
+        </div>
     )
 }
 

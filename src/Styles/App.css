@@ -1,0 +1,21 @@
+body {
+  background-color: #EFEFEF;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: auto;
+  height: auto;
+}
+
+.main-content{
+  width: 100%;
+  padding: 10px;
+}

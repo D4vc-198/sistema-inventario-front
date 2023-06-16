@@ -1,0 +1,91 @@
+/* Contenedor de todo el sidebar */
+.sidebar-container {
+    width: 250px;
+    height: 100vh;
+    text-align: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: #FFF;
+} 
+
+/* Contenedor del logo */
+.sidebar-logo-container {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.sidebar-logo-container img {
+    width: 100%;
+}
+
+/* Contenedor de la informacion del usuario */
+.sidebar-user-info-container {
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+    border-bottom: 1px solid #DFDFDF;
+    border-top: 1px solid #DFDFDF;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-user-info-image {
+    width: 30%;
+    border-radius: 50%;
+    display: flex;
+    background-color: #99A2B3;
+}
+.sidebar-user-info-image img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.sidebar-user-info-data {
+    width: 70%;
+    padding-left: 10px;
+    text-align: left;
+}
+.sidebar-user-info-data strong {
+    font-weight: 500;
+    color: #FD9730;
+}
+.sidebar-user-info-data p{
+    margin: 0;
+    font-style: italic;
+    color: #99A2B3;
+}
+
+/* ====== Elementos de navegacion ====== */
+.sidebar-nav-container ul {
+    padding: 20px 0;
+    margin: 0;
+    text-align: center;
+    list-style: none;
+}
+
+.sidebar-nav-container ul li {
+    border-radius: 12px;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #99A2B3;
+}
+
+.sidebar-nav-container ul li svg{
+    margin: 0 15px 0 0;
+}
+
+.sidebar-item-text{
+    width: 50%;
+    text-align: left;
+}
+
+.sidebar-container ul li:hover {
+    background-color: #FD9730;
+    color: #FFF;
+    cursor: pointer;
+}
