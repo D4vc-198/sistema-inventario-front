@@ -1,6 +1,5 @@
 /* Contenedor de todo el sidebar */
 .sidebar-container {
-    position: fixed;
     width: 250px;
     height: 100vh;
     text-align: center;
