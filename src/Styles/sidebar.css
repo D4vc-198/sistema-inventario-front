@@ -1,0 +1,53 @@
+/* Contenedor de todo el sidebar */
+.sidebar-container {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    text-align: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: #FFF;
+} 
+
+/* Contenedor del logo */
+.sidebar-logo-container {
+    width: 100%;
+    height: auto;
+}
+
+.sidebar-logo-container img {
+    width: 70%;
+}
+
+/* Contenedor de la informacion del usuario */
+.sidebar-user-info-container {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    border-bottom: 2px solid #DFDFDF;
+    border-top: 2px solid #DFDFDF;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-user-info-image {
+    width: 30%;
+    border-radius: 50%;
+    /* background-color: #99A2B3; */
+    background-color: #99A2B3;
+}
+.sidebar-user-info-image img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.sidebar-user-info-data {
+    width: 70%;
+    padding-left: 10px;
+    /* background-color: green; */
+    text-align: left;
+}
+.sidebar-user-info-data p{
+    margin: 0;
+}
