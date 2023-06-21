@@ -1,0 +1,34 @@
+.table-container h2 {
+  margin: 5px;
+  color: #55698f;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  padding: 10px 10px 10px 20px;
+  text-align: left;
+  background-color: #f5f7fb;
+  color: #99a2b3;
+  cursor: default;
+}
+
+td {
+  border-top: 1px solid #f4f4f6;
+  border-bottom: 1px solid #f4f4f6;
+  font-weight: 500;
+  padding: 10px 10px 10px 20px;
+}
+
+tr {
+  background-color: #FFF ;
+}
+
+tr:hover {
+  background-color: #55698f;
+  color: #FFF;
+  cursor: pointer;
+}

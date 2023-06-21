@@ -1,38 +1,60 @@
-.card-container{
-    background-color: #313131;
-    width: 240px;
-    height: 100px;
-    display: flex; /* Acomodar las tarjetas en forma horizontal */
-    align-items: center;
-    justify-content: center;
-    border-radius: 14px;
-    box-sizing: border-box;
-    margin-left: 15px;
+.card-container {
+  background-color: #fff;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 14px;
+  box-sizing: border-box;
 }
-.card-icon-container{
-   background: linear-gradient(rgb(102, 0, 255),rgb(158, 91, 216));
-   width: 70px;
-   height: 70px;
-   border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin: 0 15px 0 0;
-   margin-right: 10px; /* Espacio entre el icono y la información */
+.card-icon-container {
+  /* background: linear-gradient(rgb(102, 0, 255),rgb(158, 91, 216)); */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px 0 0;
+  margin-right: 10px; /* Espacio entre el icono y la información */
+}
+
+.card-icon-background {
+  padding: 10px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-info-container {
-    width: 120px;
-    display: flex;
-    flex-direction: column;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
 }
-.card-info-container p{
-    margin: 5px 0;
-    color: #fff;
-    flex: 1; /* Distribuir el espacio horizontalmente */
+.card-info-container p {
+  margin: 0;
+  color: #55698f;
 }
 
-.menu-lista-tarjetas {
-    display: flex;
-    width: auto;
+/* COLORES DE FONDO PARA LOS ICONOS*/
+.verde {
+  background-color: #d7f5f4;
+  color: #91bdb6;
+}
+.amarillo {
+  background-color: #fbedd5;
+  color: #eee079;
+}
+.azul {
+  background-color: #d9eeff;
+  color: #5b9bd4;
+}
+.rojo {
+  background-color: #ffe7ed;
+  color: #d77c98;
 }
