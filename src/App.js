@@ -1,7 +1,7 @@
 import './Styles/App.css'
 import Sidebar from './Components/Sidebar/Sidebar';
-import Usuarios from './Pages/Usuarios';
-import Table from './Components/Tabla/Tabla'
+import Inventario from './Pages/Inventario';
+// import Table from './Components/Tabla/Tabla'
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
         <Sidebar />
       </div>
       <div className='main-content'>
-        <Usuarios />
+        <Inventario />
       </div>
     </div>
   );

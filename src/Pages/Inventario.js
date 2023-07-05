@@ -2,8 +2,11 @@ import { BsCalculatorFill, BsFillCalendarEventFill, BsFillClipboard2CheckFill, B
 import Tarjeta from "../Components/Tarjetas/Tarjeta"
 import Tabla from "../Components/Tabla/Tabla"
 import './../Styles/usuarios.css'
+import { useEffect, useState } from "react"
+import { obtenerProducto } from "../api/inventario"
 
-const Usuarios = () => {
+const Inventario = () => {
+    const [listaProductos, setListaProductos] = useState({})
     const headerCell = [
         { name: "Employee" },
         { name: "Product" },
@@ -47,6 +50,25 @@ const Usuarios = () => {
             Price: "$752",
         },
     ]
+
+    const getProducts = async () => {
+    }
+
+    useEffect(() => {
+        async function getProducts() {
+          // You can await here
+          const getAllProducts = await obtenerProducto()
+          console.log('GET', getAllProducts.data.data)
+          // ...
+        }
+        getProducts();
+      }, []); // Or [] if effect doesn't need props or state
+
+    // useEffect(async () => {
+    //     const getProducts = await obtenerProducto()
+    //     console.log(getProducts)
+    // }, [])
+
     return (
         <>
             <div className="usuarios-menu-lista-tarjetas">
@@ -62,4 +84,4 @@ const Usuarios = () => {
     )
 }
 
-export default Usuarios
+export default Inventario
