@@ -67,7 +67,11 @@
 }
 
 .sidebar-nav-container ul li {
-  border-radius: 12px;
+  margin-bottom: 5px;
+}
+
+.sidebar-nav-container ul li a{
+  text-decoration: none;
   padding: 15px 0;
   display: flex;
   justify-content: center;
@@ -84,8 +88,14 @@
   text-align: left;
 }
 
-.sidebar-container ul li:hover {
-  background-color: #55698f;
-  color: #fff;
-  cursor: pointer;
+.active {
+  background-color: #55698f !important;
+  border-radius: 12px;
+  color: #FFF !important;
+}
+
+.sidebar-container ul li a:hover {
+  background-color: #eaf1ff;
+  border-radius: 12px;
+  color: #55698f ;
 }

@@ -1,11 +1,13 @@
 import './../../Styles/sidebar.css'
 import holbertonLogo from './../../Assets/Holberton-logo.svg'
-// import holbertonLogo from './../../Assets/Holberton-logo.svg'
 import userProfileImage from './../../Assets/user-profile-image.png'
 import { FaUserFriends, FaBox, FaTruck } from 'react-icons/fa';
-
+import { Link, useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
+    const location = useLocation()
+    const { pathname } = location
+    console.log("ROUTE: ", pathname)
     return (
         <div className='sidebar-container'>
             <div className='sidebar-logo-container'>
@@ -24,22 +26,28 @@ const Sidebar = () => {
             <div className='sidebar-nav-container'>
                 <ul>
                     <li>
-                        <FaUserFriends size='1.4em'/>
-                        <div className='sidebar-item-text'>
-                            <p>Usuarios</p>
-                        </div>
+                        <Link to="/usuarios" className={pathname === '/usuarios' ? 'active' : null}>
+                            <FaUserFriends size='1.4em' />
+                            <div className='sidebar-item-text'>
+                                <p>Usuarios</p>
+                            </div>
+                        </Link>
                     </li>
                     <li>
-                        <FaBox size='1.4em'/>
-                        <div className='sidebar-item-text'>
-                            <p>Inventario</p>
-                        </div>
+                        <Link to="/inventario" className={pathname === '/inventario' ? 'active' : null}>
+                            <FaBox size='1.4em' />
+                            <div className='sidebar-item-text'>
+                                <p>Inventario</p>
+                            </div>
+                        </Link>
                     </li>
                     <li>
-                        <FaTruck size='1.4em'/>
-                        <div className='sidebar-item-text'>
-                            <p>Proveedores</p>
-                        </div>
+                        <Link to="/proveedores" className={pathname === '/proveedores' ? 'active' : null}>
+                            <FaTruck size='1.4em' />
+                            <div className='sidebar-item-text'>
+                                <p>Proveedores</p>
+                            </div>
+                        </Link>
                     </li>
                 </ul>
             </div>

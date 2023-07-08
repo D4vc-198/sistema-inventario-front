@@ -1,9 +1,11 @@
 import './Styles/App.css'
 import Sidebar from './Components/Sidebar/Sidebar';
 import Inventario from './Pages/Inventario';
-// import Table from './Components/Tabla/Tabla'
+import { Route, Routes } from 'react-router-dom';
+import Usuarios from './Pages/Usuarios';
+import Proveedores from './Pages/Proveedores';
 
-function App() {
+const App = () => {
 
   return (
     <div className='container'>
@@ -11,10 +13,14 @@ function App() {
         <Sidebar />
       </div>
       <div className='main-content'>
-        <Inventario />
+        <Routes>
+          <Route path="/usuarios" element={<Usuarios />} />
+          <Route path="/inventario" element={<Inventario />} />
+          <Route path="/proveedores" element={<Proveedores />} />
+        </Routes>
       </div>
     </div>
-  );
+  )
 }
 
 export default App;

@@ -1,3 +1,10 @@
+.table-container-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .table-container h2 {
   margin: 5px;
   color: #55698f;
@@ -24,11 +31,37 @@ td {
 }
 
 tr {
-  background-color: #FFF ;
+  background-color: #fff;
 }
 
 tr:hover {
   background-color: #55698f;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
+}
+
+.button-add {
+  background-color: #55698f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.status-user {
+  border-radius: 15px;
+  width: 80px;
+  text-align: center;
+}
+
+.active-user {
+  background-color: #D2F1E7;
+  color: #53CCA6;
+}
+
+.inactive-user {
+  background-color: #FFE2E5;
+  color: #B86D7B;
 }

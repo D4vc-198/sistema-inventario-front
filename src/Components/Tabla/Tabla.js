@@ -2,32 +2,40 @@ import React from "react"
 import "./../../Styles/Tabla.css"
 
 const Tabla = (props) => {
-    const { header, data } = props
-    console.log(data)
+    const { tableName, headers, dataTable, labelButton, onclick } = props
+
     return (
         <div className="table-container">
-            <h2>Usuarios</h2>
+            <div className="table-container-title">
+                <h2>{tableName}</h2>
+                <button classNameonClick={onclick}>{labelButton}</button>
+            </div>
             <table>
                 <thead>
                     <tr>
-                        {header.map((header) => <th key={header.name}>{header.name}</th>)}
+                        {headers.map((item) => <th key={item.label}>{item.label}</th>)}
                     </tr>
                 </thead>
                 <tbody>
-                    {data.map((information) => (
-                        <tr key={information.Employee}>
-                            <td>{information.Employee}</td>
-                            <td>{information.Product}</td>
-                            <td>{information.SKU}</td>
-                            <td>{information.ExpiryDay}</td>
-                            <td>{information.Quantity}</td>
-                            <td>{information.Price}</td>
-                        </tr>
+                    {dataTable && dataTable.map((data, index) => (
+                        <tr key={index}>
+                            {headers.map((headValue) => {
+                                if (headValue.value === 'active') {
+                                    return (
+                                        <td>
+                                            <div className={data[headValue.value] === 1 ? "status-user active-user" : "status-user inactive-user"}>
+                                            {data[headValue.value] === 1 ? "Activo" : "Inactivo"}
+                                        </div>
+                                        </td>
+                    )
+                                }
+                    return <td>{data[headValue.value]}</td>
+                            })}
+                </tr>
                     ))}
-                </tbody>
-
-            </table>
-        </div>
+            </tbody>
+        </table>
+        </div >
     )
 }
 
